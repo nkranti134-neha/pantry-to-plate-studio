@@ -1,60 +1,102 @@
-# Pantry To Plate Studio
+# 🍳 Pantry Chef — Pantry to Plate Studio
 
-def generate_recipe(ingredients, cuisine, diet):
+**Turn the ingredients you already have into delicious recipe ideas!**
 
-    """
+Pantry Chef is a web application that helps users discover recipes based on ingredients available in their kitchen. Users can enter ingredients, choose a cuisine and dietary preference, and get recipe suggestions without wondering what to cook.
 
-    generate a recipe using ingredients provided.
+🌐 **Live Demo:** https://pantry-to-plate-studio.lovable.app
 
-      cuisine can be "italian","Mexican","Indian","Any",etc.
+## ✨ Features
 
-        diet can be "Veg","non_Veg","jain","Any",etc.
+- 🥕 **Ingredient-Based Recipes:** Enter available ingredients to discover meal ideas.
+- ⚡ **Quick Add Ingredients:** Add common ingredients with a single click.
+- 🌎 **Multiple Cuisines:** Explore Indian, Italian, Mexican, Chinese, Thai, and Mediterranean options.
+- 🥗 **Dietary Preferences:** Choose from vegetarian, non-vegetarian, vegan, Jain, or other available options.
+- 🎨 **Clean User Interface:** Enjoy a modern, responsive, kitchen-inspired design.
+- 💡 **Recipe Discovery:** Find inspiration for your next meal using ingredients you already have.
 
-        """
+## 🛠️ Tech Stack
 
-    
+Based on the project's current codebase, verify these technologies before finalizing this section:
 
-    prompt = f"""
+- **Frontend:** React
+- **Language:** TypeScript
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS
+- **UI Components:** shadcn/ui
+- **Development Platform:** Lovable
+- **Version Control:** Git and GitHub
 
-    Generate a recipe using these ingredients: {', '.join(ingredients)}
+## 🚀 Getting Started
 
-    The recipe should not be more than 100 words.
+To run the project locally, you need Node.js and npm installed.
 
-    Cuisine: {cuisine}
+### 1. Clone the repository
 
-    Diet: {diet}
+```bash
+git clone https://github.com/nkranti134-neha/pantry-to-plate-studio.git
+```
 
-    """
+### 2. Navigate to the project folder
 
-    response = client.models.generate_content(
+```bash
+cd pantry-to-plate-studio
+```
 
-        model="gemini-3.6-flash",
+### 3. Install dependencies
 
-        contents=prompt
+```bash
+npm install
+```
 
-    )
+### 4. Start the development server
 
-    print(response.text)       create a recipe generating aap
-
-This project was built with [Lovable](https://lovable.dev).
-
-**Live app**: https://pantry-to-plate-studio.lovable.app
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/228de485-742e-5650-813c-0bdaaae1946b).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+```bash
 npm run dev
 ```
+
+Open the local URL shown in your terminal to view the application.
+
+## 📸 Screenshots
+
+Add screenshots of your application's homepage, ingredient selection, and recipe results here.
+
+Example:
+
+```markdown
+![Pantry Chef Homepage](screenshots/homepage.png)
+```
+
+## 🎯 Project Objective
+
+The objective of Pantry Chef is to make everyday meal planning easier by helping users discover recipe ideas from ingredients they already have. The application aims to reduce meal-planning effort, encourage creativity in the kitchen, and make cooking decisions more convenient.
+
+## 🔮 Future Enhancements
+
+- AI-powered personalized recipe recommendations.
+- Step-by-step cooking instructions.
+- Ingredient substitutions and alternatives.
+- Recipe preparation time and difficulty levels.
+- User accounts and saved favorite recipes.
+- Nutrition information and meal planning.
+
+## 👩‍💻 Developer
+
+**Neha**
+
+B.Tech Computer Science and Engineering (Artificial Intelligence)
+
+## 📄 License
+
+Choose and add an appropriate open-source license before distributing this project publicly. If no license is specified, the default copyright restrictions generally apply.
+
+---
+
+⭐ If you find this project interesting, consider giving the repository a star!
+
+**Live App:** https://pantry-to-plate-studio.lovable.app
+
+
+   
+
+
