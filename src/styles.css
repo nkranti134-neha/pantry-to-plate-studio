@@ -19,6 +19,8 @@
  */
 
 @theme inline {
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -62,26 +64,26 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
+  --radius: 0.75rem;
+  --background: oklch(0.97 0.018 85);
+  --foreground: oklch(0.24 0.03 50);
+  --card: oklch(0.99 0.01 85);
+  --card-foreground: oklch(0.24 0.03 50);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --primary: oklch(0.6 0.17 40);
+  --primary-foreground: oklch(0.99 0.01 85);
+  --secondary: oklch(0.92 0.03 80);
+  --secondary-foreground: oklch(0.3 0.03 50);
+  --muted: oklch(0.93 0.02 80);
+  --muted-foreground: oklch(0.5 0.03 55);
+  --accent: oklch(0.55 0.09 140);
+  --accent-foreground: oklch(0.99 0.01 85);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --border: oklch(0.86 0.03 75);
+  --input: oklch(0.86 0.03 75);
+  --ring: oklch(0.6 0.17 40);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -141,4 +143,19 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
   }
+}
+
+@layer base { body { font-family: var(--font-sans); } }
+@layer components {
+  .font-display { font-family: var(--font-display); font-weight: 500; letter-spacing: -0.02em; }
+  .eyebrow { @apply text-xs uppercase tracking-[0.2em] text-muted-foreground font-medium; }
+  .label { @apply block text-sm font-semibold mb-2.5; }
+  .card-paper { @apply bg-card border border-border rounded-2xl p-6 md:p-8; box-shadow: 0 1px 0 var(--border), 0 20px 40px -24px oklch(0.4 0.08 50 / 0.25); }
+  .recipe-card { @apply rounded-2xl p-6 md:p-10 bg-secondary border border-border min-h-[420px]; background-image: repeating-linear-gradient(transparent 0 31px, oklch(0.86 0.03 75 / 0.5) 31px 32px); }
+  .field { @apply w-full rounded-lg bg-background border border-input px-3.5 py-2.5 text-sm outline-none focus:ring-2 focus:ring-ring/40; }
+  .chip { @apply inline-flex items-center gap-1.5 rounded-full bg-accent text-accent-foreground px-3 py-1 text-sm transition hover:opacity-80; }
+  .pill { @apply rounded-full border border-border px-3.5 py-1.5 text-sm transition hover:border-primary; }
+  .pill[data-active="true"] { @apply bg-foreground text-background border-foreground; }
+  .btn-primary { @apply rounded-xl bg-primary text-primary-foreground py-3.5 font-semibold transition hover:brightness-110 disabled:opacity-60; }
+  .btn-ghost { @apply rounded-lg border border-border px-4 text-sm font-medium hover:bg-muted; }
 }
