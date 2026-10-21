@@ -120,7 +120,7 @@ function Index() {
             {recipe ? (
               <article>
                 <p className="eyebrow">{cuisine} · {diet}</p>
-                <h2 className="font-display text-3xl md:text-4xl mt-2 mb-5">{title.replace(/[#*]/g, "").trim()}</h2>
+                <h2 className="font-display text-3xl md:text-4xl mt-2 mb-5">{(title ?? "").replace(/[#*]/g, "").trim()}</h2>
                 <div className="whitespace-pre-wrap leading-relaxed text-[15px]">
                   {body.join("\n").replace(/\*\*/g, "").replace(/^#+\s*/gm, "").trim()}
                 </div>
