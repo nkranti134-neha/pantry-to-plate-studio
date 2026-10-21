@@ -81,7 +81,7 @@ function Index() {
 
   const surprise = () => {
     const ing = pick(PANTRY, 3);
-    const c = pick(CUISINES.slice(1), 1)[0];
+    const c = pick(CUISINES.slice(1), 1)[0] ?? "Any";
     setItems(ing);
     setCuisine(c);
     run(ing, c, diet);
