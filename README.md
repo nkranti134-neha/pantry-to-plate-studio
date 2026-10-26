@@ -59,13 +59,7 @@ Open the local URL shown in your terminal to view the application.
 
 ## 📸 Screenshots
 
-Add screenshots of your application's homepage, ingredient selection, and recipe results here.
-
-Example:
-
-```markdown
 ![Pantry Chef Homepage](screenshots/homepage.png)
-```
 
 ## 🎯 Project Objective
 
