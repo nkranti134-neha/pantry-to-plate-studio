@@ -59,7 +59,7 @@ Open the local URL shown in your terminal to view the application.
 
 ## 📸 Screenshots
 
-![Pantry Chef Homepage](screenshots/homepage.png)
+![Pantry Chef Homepage](homepage.png)
 
 ## 🎯 Project Objective
 
